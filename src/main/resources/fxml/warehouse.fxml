@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.warehouse.controllers.WarehouseController">
+   <children>
+      <Text fill="WHITE" layoutX="306.0" layoutY="49.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Üdvözöljük a raktárban!" textAlignment="CENTER">
+         <font>
+            <Font name="Ebrima" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="225.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kérjük válassza ki, hogy mit szeretne csinálni a raktárban.">
+         <font>
+            <Font name="Ebrima" size="14.0" />
+         </font>
+      </Text>
+      <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="319.0" layoutY="200.0" minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#loadNewPackageScreen" text="Új csomag leadás" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="319.0" layoutY="260.0" minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#loadPackageManagerScreen" text="Csomagok kezelése">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="319.0" layoutY="500.0" minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onMouseClicked="#closeApplication" text="Kilépés">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>

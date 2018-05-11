@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.warehouse.controllers.PackageManagerController">
+   <children>
+      <Text fill="WHITE" layoutX="340.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Csomagok kezelése!">
+         <font>
+            <Font name="Ebrima" size="18.0" />
+         </font>
+      </Text>
+      <Button focusTraversable="false" layoutX="50.0" layoutY="484.0" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#filter" prefHeight="30.0" prefWidth="100.0" text="Szűrés">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button focusTraversable="false" layoutX="14.0" layoutY="561.0" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#backToWelcomeScreen" text="Vissza">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView fx:id="packageTable" focusTraversable="false" layoutY="60.0" prefHeight="340.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="packageIds" editable="false" prefWidth="196.0" resizable="false" text="Csomag azonosító" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <ListView focusTraversable="false" layoutX="200.0" layoutY="60.0" prefHeight="540.0" prefWidth="600.0" />
+      <Label fx:id="packageId" layoutX="408.0" layoutY="70.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="senderName" layoutX="475.0" layoutY="118.0" />
+      <Text fill="WHITE" layoutX="225.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feladó neve :" />
+      <Text fill="WHITE" layoutX="225.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feladó lakcíme :" />
+      <Text fill="WHITE" layoutX="225.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett neve :" />
+      <Text fill="WHITE" layoutX="225.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Szállítási cím : " />
+      <Text fill="WHITE" layoutX="225.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feladás dátuma : " />
+      <Text fill="WHITE" layoutX="225.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Típus :" />
+      <Text fill="WHITE" layoutX="225.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Súly : " />
+      <Text fill="WHITE" layoutX="225.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Státusz :" />
+      <Text fill="WHITE" layoutX="225.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Várható szállítás dátuma :" />
+      <Label fx:id="senderHomeAddress" layoutX="475.0" layoutY="158.0" />
+      <Label fx:id="recipientName" layoutX="475.0" layoutY="198.0" />
+      <Label fx:id="deliveryAddress" layoutX="475.0" layoutY="238.0" />
+      <Label fx:id="type" layoutX="475.0" layoutY="278.0" />
+      <Label fx:id="weight" layoutX="475.0" layoutY="318.0" />
+      <Label fx:id="status" layoutX="475.0" layoutY="358.0" />
+      <Label fx:id="dateOfDispatch" layoutX="475.0" layoutY="398.0" />
+      <Label fx:id="exceptedDeliveryDate" layoutX="475.0" layoutY="438.0" />
+      <ComboBox fx:id="statuses" focusTraversable="false" layoutX="25.0" layoutY="414.0" prefHeight="20.0" prefWidth="150.0" promptText="Csomag státusza">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Mindegyik"/>
+               <String fx:value="Feldolgozás alatt" />
+               <String fx:value="Szállítás alatt" />
+               <String fx:value="Kiszállítva" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <ComboBox fx:id="types" focusTraversable="false" layoutX="25.0" layoutY="449.0" prefHeight="20.0" prefWidth="150.0" promptText="Csomag típusa">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Mindegyik"/>
+               <String fx:value="Szabványos" />
+               <String fx:value="Törékeny" />
+               <String fx:value="Veszélyes" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Text fill="WHITE" layoutX="225.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kézbesítés dátuma :" />
+      <Label fx:id="deliveryDate" layoutX="475.0" layoutY="486.0" />
+      <Button fx:id="modifyStatusButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="225.0" layoutY="540.0" mnemonicParsing="false" onMouseClicked="#modifyStatus" prefHeight="30.0" prefWidth="120.0" textAlignment="CENTER" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="deletePackageButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="675.0" layoutY="540.0" mnemonicParsing="false" onMouseClicked="#deletePackage" prefHeight="30.0" prefWidth="100.0" text="Törlés" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>
