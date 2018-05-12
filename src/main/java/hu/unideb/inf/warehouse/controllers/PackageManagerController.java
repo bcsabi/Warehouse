@@ -138,6 +138,7 @@ public class PackageManagerController {
                     modifyStatusButton.setVisible(false);
                     deletePackageButton.setVisible(false);
                     status.setText("Kiszállítva");
+                    deliveryDate.setText(pack.getDeliveryDate().toString());
                     break;
                 }
         }
@@ -151,7 +152,7 @@ public class PackageManagerController {
         alert.setHeaderText(null);
         alert.setContentText("Biztosan meg szeretné változtaztatni a csomag státuszát a következőre: " + status + "?");
         alert.getButtonTypes().setAll(yesButton, cancelButton);
-        Optional<ButtonType> result = deleteAlert(yesButton, cancelButton).showAndWait();
+        Optional<ButtonType> result = alert.showAndWait();
         return result.get() == yesButton;
     }
 
@@ -163,9 +164,9 @@ public class PackageManagerController {
         Optional<ButtonType> result = deleteAlert(yesButton, cancelButton).showAndWait();
         if(result.get() == yesButton) {
             packageDAO.deletePackage(pack);
+            clearLabels();
+            loadPackages();
         }
-        clearLabels();
-        loadPackages();
     }
 
     private Alert deleteAlert(ButtonType yesButton, ButtonType cancelButton) {

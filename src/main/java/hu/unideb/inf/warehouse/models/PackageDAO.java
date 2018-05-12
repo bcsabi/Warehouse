@@ -104,7 +104,6 @@ public class PackageDAO {
             return packages;
         }
         else if(status.equals("Mindegyik")) {
-            System.out.println(status + type);
             return packages
                     .stream()
                     .filter(pack -> pack.getPackageType().equals(type))
