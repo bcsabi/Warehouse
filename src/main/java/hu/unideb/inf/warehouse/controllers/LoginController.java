@@ -39,7 +39,7 @@ public class LoginController {
             Map<String, String> properties = new HashMap<>();
             properties.put("javax.persistence.jdbc.user", userName.getText());
             properties.put("javax.persistence.jdbc.password", password.getText());
-            new EntityManagement().createConnection("storage", properties);
+            new EntityManagement().createConnection("warehouse", properties);
             setStorageScreen();
         }
         catch(ServiceException e) {

@@ -104,6 +104,7 @@ public class PackageDAO {
             return packages;
         }
         else if(status.equals("Mindegyik")) {
+            System.out.println(status + type);
             return packages
                     .stream()
                     .filter(pack -> pack.getPackageType().equals(type))
@@ -147,7 +148,7 @@ public class PackageDAO {
      * @param packages egy csomag lista.
      */
     public void setPackages(ObservableList<Package> packages) {
-        packages = packages;
+        this.packages = packages;
     }
 
 }
