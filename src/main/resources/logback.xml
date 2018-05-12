@@ -58,7 +58,7 @@
     <logger name="org.hibernate.type" level="ALL" />
     <logger name="org.hibernate" level="DEBUG" />
 
-    <root level="ALL">
+    <root level="DEBUG">
         <appender-ref ref="FILE1" />
         <appender-ref ref="FILE2" />
         <appender-ref ref="STDOUT" />

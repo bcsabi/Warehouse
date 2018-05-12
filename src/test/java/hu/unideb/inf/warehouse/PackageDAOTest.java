@@ -42,7 +42,6 @@ public class PackageDAOTest {
     @Test
     public void setPackagesTest() {
         Assert.assertEquals(testPackages, packageDAO.getPackages());
-        packageDAO.getPackages().forEach(System.out::println);
     }
 
     @Test
