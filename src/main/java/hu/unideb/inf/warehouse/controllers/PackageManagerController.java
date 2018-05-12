@@ -1,5 +1,6 @@
 package hu.unideb.inf.warehouse.controllers;
 
+import hu.unideb.inf.warehouse.Main;
 import hu.unideb.inf.warehouse.models.Package;
 import hu.unideb.inf.warehouse.models.PackageDAO;
 import javafx.beans.property.SimpleStringProperty;
@@ -9,8 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
-import hu.unideb.inf.warehouse.Main;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -217,10 +216,14 @@ public class PackageManagerController {
             case "Feldolgozás alatt" :
                 modifyStatusButton.setText("Szállítás alatt");
                 modifyStatusButton.setVisible(true);
+                deletePackageButton.setVisible(true);
+                deliveryDate.setText("");
                 break;
             case "Szállítás alatt" :
                 modifyStatusButton.setText("Kiszállítva");
                 modifyStatusButton.setVisible(true);
+                deletePackageButton.setVisible(true);
+                deliveryDate.setText("");
                 break;
             case "Kiszállítva" :
                 modifyStatusButton.setVisible(false);
@@ -228,7 +231,6 @@ public class PackageManagerController {
                 deliveryDate.setText(pack.getDeliveryDate().toString());
                 break;
         }
-        deletePackageButton.setVisible(true);
         logger.info("A csomag adatok sikeresen betöltve.");
     }
 

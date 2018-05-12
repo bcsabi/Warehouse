@@ -35,7 +35,7 @@ Az adatbázissal való kapcsolat létrehozásához szükséges az `Oracle JDBC 8
 amely elérhető az alábbi linken: [OJDBC 8](http://www.oracle.com/technetwork/database/features/jdbc/jdbc-ucp-122-3110062.html)
 
 Az `OJDBC 8` driver telepítése az alábbi parancs segítségével lehetséges: `mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc8 -Dversion=12.2.0.1 -Dpackaging=jar -Dfile=ojdbc8.jar -DgeneratePom=true`
-A parancs kiadása után az `OJDBC 8` driver a {user.home}/.m2 könyvtár alá kerül elhelyezésre.
+A parancs kiadása után az `OJDBC 8` driver a ${user.home}/.m2 könyvtár alá kerül elhelyezésre.
 
 A `Java JDK 1.8-as` verziója az alábbi linken elérhető: [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 

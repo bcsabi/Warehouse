@@ -1,7 +1,7 @@
 package hu.unideb.inf.warehouse.controllers;
 
-import hu.unideb.inf.warehouse.models.EntityManagement;
 import hu.unideb.inf.warehouse.Main;
+import hu.unideb.inf.warehouse.models.EntityManagement;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

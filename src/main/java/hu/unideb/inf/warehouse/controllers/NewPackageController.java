@@ -1,5 +1,6 @@
 package hu.unideb.inf.warehouse.controllers;
 
+import hu.unideb.inf.warehouse.Main;
 import hu.unideb.inf.warehouse.models.Package;
 import hu.unideb.inf.warehouse.models.PackageDAO;
 import javafx.fxml.FXML;
@@ -9,14 +10,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Random;
-
-import hu.unideb.inf.warehouse.Main;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * A csomagok leadását reprezentáló osztály.

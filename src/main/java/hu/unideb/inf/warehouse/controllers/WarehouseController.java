@@ -1,5 +1,6 @@
 package hu.unideb.inf.warehouse.controllers;
 
+import hu.unideb.inf.warehouse.Main;
 import hu.unideb.inf.warehouse.models.EntityManagement;
 import hu.unideb.inf.warehouse.models.PackageDAO;
 import javafx.fxml.FXML;
@@ -9,8 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
-
-import hu.unideb.inf.warehouse.Main;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

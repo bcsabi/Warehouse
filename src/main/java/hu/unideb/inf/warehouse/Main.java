@@ -44,6 +44,10 @@ public class Main extends Application {
         }
     }
 
+    /**
+     * Visszaadja a stage példányunkat.
+     * @return a stage példány.
+     */
     public Stage getStage() {
         return stage;
     }

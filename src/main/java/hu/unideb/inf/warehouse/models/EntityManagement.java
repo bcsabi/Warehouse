@@ -38,19 +38,35 @@ public class EntityManagement {
         entityManagerFactory.close();
     }
 
+    /**
+     * Visszaadja az EntityManagerFactory-t.
+     * @return EntityManagerFactory.
+     */
     public EntityManagerFactory getEntityManagerFactory() {
         return entityManagerFactory;
     }
 
+    /**
+     * Beállítja az EntitiyManagerFactory-t.
+     * @param entityManagerFactory az új EntityManagerFactory.
+     */
     public void setEntityManagerFactory(EntityManagerFactory entityManagerFactory) {
-        entityManagerFactory = entityManagerFactory;
+        this.entityManagerFactory = entityManagerFactory;
     }
 
+    /**
+     * Visszaadja az EntityManager-t.
+     * @return EntityManager.
+     */
     public EntityManager getEntityManager() {
         return entityManager;
     }
 
-    public void setEntityManager(javax.persistence.EntityManager entityManager) {
-        entityManager = entityManager;
+    /**
+     * Beállítja az EntitiyManager-t.
+     * @param entityManager az új EntityManager.
+     */
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 }
